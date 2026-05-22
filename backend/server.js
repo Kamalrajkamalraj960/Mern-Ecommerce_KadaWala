@@ -19,7 +19,10 @@ connectDB();
 const app = express();
 
 // Standard middlewares
-app.use(cors());
+app.use(cors({
+  origin: "https://mern-ecommerce-kadawala.vercel.app/",
+  credentials: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
